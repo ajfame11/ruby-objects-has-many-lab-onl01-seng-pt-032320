@@ -8,7 +8,7 @@ class Author
   end
 
   def posts
-    Post.all.find?
+    Post.all.select {|p| p.author == self}
   end
 
   def add_post(post)
